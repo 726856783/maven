@@ -36,8 +36,10 @@
 
                 <artifactId>maven=complier-plugin</artifactId>
 
+                <version>2.5.1</version>
+
                 <configuration>
-                    
+
                     <source>1.7</source>
 
                     <tagrget>1.7</tagrget>
@@ -57,20 +59,29 @@
                 <executions>
 
                     <execution>
+
                         <phase>package</phase>
 
                         <goals>
+
                             <goal>shade</goal>
+
                         </goals>
 
                         <configuration>
+
                             <transformers>
 
-                                <transfomer>
-                                    
+                                <transfomer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+
+                                    <mainClass>com.xu.org.helloworld.HelloWorld</mainClass>
+
                                 </transfomer>
+
                             </transformers>
+
                         </configuration>
+
                     </execution>
 
                 </executions>

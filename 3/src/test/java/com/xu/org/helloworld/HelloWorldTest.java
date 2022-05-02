@@ -12,6 +12,6 @@ public class HelloWorldTest{
 
         String r=helloWorld.say();
 
-        assertEquals("Heelo Maven", r);
+        assertEquals("hello Maven", r);
     }
 }
